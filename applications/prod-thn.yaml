@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-demo-prod-thn
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/erangaeb/kube-manifests.git
+    targetRevision: main 
+    path: prod-thn
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kargo-demo-prod-thn
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
