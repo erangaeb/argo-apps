@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/erangaeb/kube-manifests.git
-    targetRevision: main 
+    targetRevision: 01bbf715160c8659477f8bddb920391eda939c38
     path: prod-thn
   destination:
     server: https://kubernetes.default.svc
